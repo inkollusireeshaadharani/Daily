@@ -67,6 +67,8 @@ public class ArrayListPractice {
     // can create an array that looks like a matrix
     //in c or cpp 2-d array is also continuously allocated
 
+
+	//but java does not support it
     
     
     
