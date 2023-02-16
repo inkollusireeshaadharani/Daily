@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArrayListPractice {
     //Array and ArrayList practice
@@ -36,24 +37,6 @@ public class ArrayListPractice {
 
     //length of array is given by length variable
 
-    public static void main(String args[]){
-        int[] nums={3,4,5,6};
-        System.out.println(nums);
-        System.out.println(Arrays.toString(nums));
-        change(nums);
-        System.out.println(nums);
-        System.out.println(Arrays.toString(nums));
-
-        int[][] arr2={
-            {1,2,3},
-            {1,2,4},
-            {1,2,5}
-        };
-
-        System.out.println(Arrays.toString(arr2));//doesnt work with 2d
-    }
-
-    //arrays are mutable in java
 
     static void change(int[] arr){
         System.out.println(arr);
@@ -62,15 +45,66 @@ public class ArrayListPractice {
 
     }
 
-    //two-D array
+    public static void main(String args[]){
 
-    // can create an array that looks like a matrix
-    //in c or cpp 2-d array is also continuously allocated
+        try (Scanner sc = new Scanner(System.in)) {
+			int xyz=sc.nextInt();
+			System.out.println(xyz);
+			int[] nums={3,4,5,6};
+			System.out.println(nums);
+			System.out.println(Arrays.toString(nums));
+			change(nums);
+			System.out.println(nums);
+			System.out.println(Arrays.toString(nums));
+
+			int[][] arr2={
+			    {1,2,3},
+			    {1,2,4},
+			    {1,2,5}
+			};
+
+			System.out.println(Arrays.toString(arr2));//doesnt work with 2d
+   
+			//two-D array
+
+			// can create an array that looks like a matrix
+			//in c or cpp 2-d array is also continuously allocated
 
 
-	//but java does not support it
+			//but java does not support it
+			
+			//int[][] arr3=new int[5][];
+			//Variable size 2D array
+
+			
+			int[][] arrnew=new int[3][4];
+			System.out.println(arrnew.length);//no of rows
+			
+			for(int row=0;row<arrnew.length;row++){
+			    for(int col=0;col<arrnew[row].length;row++){//arrnew[row].length helps in identifying column length
+			        arrnew[row][col]=sc.nextInt();
+			    }
+			}
+		}
+        
+
+
+    /*
+     * 
+     */
     
+
+
+
+
+
+
+    }
+
+    //arrays are mutable in java
+
     
+
     
 
 
