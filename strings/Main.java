@@ -19,6 +19,12 @@ class Main {
 		System.out.println(al.equals(bl));
 
 		System.out.println(name.charAt(0));
+		
+		float an=453.1264f;
+		System.out.printf("Formatted number is %.2f\n",an);
+		System.out.println(Math.PI);
+		System.out.printf("Formatted Pi is %.3f\n",Math.PI);
+		System.out.printf("hello i am %s\n","dharani");
 	}
 
 }
@@ -134,6 +140,17 @@ class Main {
  * 
  * ---------------------------------------------------------------------------------------
  * getting a character -- using charAt(index)
+ * 
+ * pretty printing
+ * -----------------------
+ * (formatting)
+ * 
+ * float a=453.1234f;
+ * System.out.printf("Formatted number is %.2f",a);//also performs rounding off
+ * System.out.println(Math.PI);
+ * System.out.printf("hello i am %s\n","dharani");
+ * 
+ * search for other placeholders as well
  * 
  * 
  * 
