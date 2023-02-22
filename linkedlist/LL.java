@@ -3,8 +3,8 @@ package linkedlist;
 public class LL {
 	
 	private Node head;
-	private Node tail;
-	private int size;
+	private Node tail;//to reduce the complexity
+	private int size;//to reduce the complexity
 	public LL() {
 		this.size=0;
 	}
@@ -89,6 +89,7 @@ public class LL {
         return val;
     }
 
+    //finding a node using the value
     public Node find(int value) {
         Node node = head;
         while (node != null) {
@@ -100,6 +101,7 @@ public class LL {
         return null;
     }
 
+    //finding a node using position
     public Node get(int index) {
         Node node = head;
         for (int i = 0; i < index; i++) {
