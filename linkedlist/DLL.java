@@ -15,14 +15,14 @@ public class DLL {
 
     public void display() {
         Node node = head;
-        Node last = null;
+        Node last = null;//just like int i=0; creating a temp variable that points to 0
         while (node != null) {
             System.out.print(node.val + " -> ");
-            last = node;
+            last = node;//without this line it is the same as SLL
             node = node.next;
         }
         System.out.println("END");
-
+        
         System.out.println("Print in reverse");
         while (last != null) {
             System.out.print(last.val + " -> ");
@@ -35,12 +35,13 @@ public class DLL {
         Node node = new Node(val);
         Node last = head;
 
-        node.next = null;
+        node.next = null;//irrespective of the code
 
-        if (head == null) {
+        if (head == null) {//when the list is empty
             node.prev = null;
-            head = node;
-            return;
+            head = node;//the node itself is the head 
+            return;//dont have to perform the next steps
+            //we can also use if else but this is more meaningful
         }
 
         while (last.next != null) {
@@ -57,15 +58,15 @@ public class DLL {
             if (node.val == value) {
                 return node;
             }
-            node = node.next;
+            node = node.next;//dont forget the updation
         }
-        return null;
+        return null;//edge case
     }
 
     public void insert(int after, int val) {
         Node p = find(after);
 
-        if (p == null) {
+        if (p == null) {//edge case
             System.out.println("does not exist");
             return;
         }
@@ -74,7 +75,7 @@ public class DLL {
         node.next = p.next;
         p.next = node;
         node.prev = p;
-        if (node.next != null) {
+        if (node.next != null) {//true when the element is inserted at end
             node.next.prev = node;
         }
     }
