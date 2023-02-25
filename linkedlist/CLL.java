@@ -23,14 +23,17 @@ public class CLL {
         tail = node;
     }
 
-    public void display() {
+    public void display() {//DISPLAY THE LIST
         Node node = head;
-        if (head != null) {
+        if (head != null) {//IF LIST IS NOT EMPTY
+        	//using the do while loop to execute the loop at least once for head and 
+        	//update the pointer until we reach the head again
             do {
                 System.out.print(node.val + " -> ");
-                if (node.next != null) {
-		    node = node.next;
-		}
+                if (node.next != null) 
+                {
+                	node = node.next;
+                }
             } while (node != head);
         }
         System.out.println("HEAD");
@@ -38,26 +41,26 @@ public class CLL {
 
     public void delete(int val) {
         Node node = head;
-        if (node == null) {
+        if (node == null) {//LIST IS EMPTY
             return;
         }
 
-        if (head == tail){
+        if (head == tail){//ONLY ONE ELEMENT
             head = null;
             tail = null;
             return;
         }
 
-        if (node.val == val) {
+        if (node.val == val) {//DELETING HEAD
             head = head.next;
             tail.next = head;
             return;
         }
-
+        //ANY OTHER ELEMENT
         do {
-            Node n = node.next;
-            if (n.val == val) {
-                node.next = n.next;
+            Node nextNode = node.next;
+            if (nextNode.val == val) {
+                node.next = nextNode.next;
                 break;
             }
             node = node.next;
