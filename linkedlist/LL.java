@@ -57,8 +57,25 @@ public class LL {
         size++;
     }
 
-    
+    // insert using recursion
+    public void insertRec(int val, int index) {
+        head = insertRec(val, index, head);//in case element is inserted at head
+    }
+    private Node insertRec(int val, int index, Node node) {
+        if (index == 0) {
+            Node temp = new Node(val, node);
+            //constrcutor definition
+            //public Node(int value,Node next) {
+    		//	this.value=value;
+    		//	this.next=next;
+            //}
+            size++;
+            return temp;
+        }
 
+        node.next = insertRec(val, index-1, node.next);
+        return node;
+    }
 
     public int deleteLast() {
         if (size <= 1) {
