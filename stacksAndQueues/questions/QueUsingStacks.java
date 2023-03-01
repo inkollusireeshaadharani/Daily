@@ -1,10 +1,12 @@
 package stacksAndQueues.questions;
 
+//insert efficient technique
+//use built-in stack functions
 import java.util.Stack;
 
 public class QueUsingStacks {
 	private Stack<Integer> first;
-	  private Stack<Integer> second;
+	private Stack<Integer> second;
 
 	  public QueUsingStacks() {
 	    first = new Stack<>();
@@ -39,6 +41,8 @@ public class QueUsingStacks {
 	    return peeked;
 	  }
 
+	  
+	  //because we consider first as the main queue
 	  public boolean isEmpty() {
 	    return first.isEmpty();
 	  }
