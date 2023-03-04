@@ -47,6 +47,7 @@ class Main {
         }
         // this line will execute if none of the return statements above have executed
         // hence the target not found
+        //-1 may be the element so return the max of int in range
         return Integer.MAX_VALUE;
     }
     
@@ -58,6 +59,7 @@ class Main {
         }
 
         // run a for loop
+      //for each
         for (int element : arr) {
             if (element == target) {
                 return true;
